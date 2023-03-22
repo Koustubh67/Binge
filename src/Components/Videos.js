@@ -1,14 +1,19 @@
 import { Stack } from "@mui/system";
 import React, { useEffect, useState } from "react";
+import {useNavigate } from "react-router-dom";
 import VideoCard from "./VideoCard";
 import fetch from "./fetchAPI";
-import "./videos.css";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 function Videos({category}) {
+  const navigate = useNavigate();
   const {id}=useParams();
   const [data, setData] = useState([]);
-  
+  const handleClick=(event,id)=>{
+    event.preventDefault();
+    navigate(`/video/${id}`)
+    console.log(id)
+  }
   useEffect(() => {
     const fetchUrl = async () => {
       if (id){
@@ -39,6 +44,7 @@ function Videos({category}) {
     <Stack
       direction="row"
       sx={{
+        backgroundColor:'black',
         padding: 2,
         gap: 2,
         alignContent: "flex-start",
@@ -49,6 +55,7 @@ function Videos({category}) {
     >
       {data.map((item) => (
         <VideoCard
+          onClick={(event)=>{handleClick(event,item?.id?.videoId)}}
           publishTime={item?.snippet?.publishTime}
           id={item?.id?.videoId}
           channel={item?.snippet?.channelTitle}

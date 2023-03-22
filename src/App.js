@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Sidebar from "./Components/Sidebar";
 import { Stack } from "@mui/system";
 import Videos from "./Components/Videos";
+import VideoPage from "./Components/VideoPage";
 function App() {
   return (
     <>
@@ -33,7 +34,9 @@ function App() {
             ></Route>
             <Route path="Sports" element={<Videos category="Sports" />}></Route>
             <Route path="home/:id" element={<Videos />}></Route>
+            <Route path='video/:videoID' element={<VideoPage/>}></Route>
             <Route path="*" element={<Navigate to="/Home" />}></Route>
+            
           </Routes>
         </Stack>
       </BrowserRouter>

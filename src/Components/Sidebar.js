@@ -1,6 +1,6 @@
 import { Stack } from "@mui/system";
 import React, { useState } from "react";
-import "./sidebar.css";
+import './sidebar.css'
 import SportsBasketballIcon from "@mui/icons-material/SportsBasketball";
 import SidebarComponent from "./SidebarComponent";
 import MusicNoteIcon from "@mui/icons-material/MusicNote";
@@ -15,8 +15,9 @@ const Sidebar = () => {
     <Stack
       direction={{ lg: "column", md: "row", sm: "row",xs:'row' }}
       sx={{
+        backgroundColor:"black",
         overflow: "hidden",
-        overflowX: { sm: "scroll", xs: "scroll",lg: "none" },
+        overflowX: { sm: "scroll", xs: "scroll",lg: "none",md:'none',xl:"none"},
         gap:{lg:6,md:4,sm:6,xs:6} ,
         alignItems: "center",
         flex: { lg: 0.1, sm: 0.1, md: 0.1,xs:0.1 },
