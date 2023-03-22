@@ -1,0 +1,15 @@
+
+a{
+  padding: 10px;
+  text-decoration: none;
+  gap: 10px;
+  display: flex;
+  font-weight: bold;
+}
+
+@media (max-width: 1198px) {
+  html {
+    font-size: 80%;
+  }
+  
+}
