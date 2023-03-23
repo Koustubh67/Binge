@@ -14,7 +14,8 @@ const fetch = {
   },
   Home: {
     params: {
-      relatedToVideoId: "7ghhRHRP6t4",
+      q: "india",
+      regionCode: "US",
       part: "id,snippet",
       type: "video",
       maxResults: "50",
@@ -26,7 +27,7 @@ const fetch = {
   },
   Podcasts: {
     params: {
-      q: "podcast",
+      q: "Joe Rogan",
       part: "snippet,id",
       regionCode: "US",
       maxResults: "50",

@@ -15,6 +15,7 @@ const Sidebar = () => {
     <Stack
       direction={{ lg: "column", md: "row", sm: "row",xs:'row' }}
       sx={{
+        pt:5,
         backgroundColor:"black",
         overflow: "hidden",
         overflowX: { sm: "scroll", xs: "scroll",lg: "none",md:'none',xl:"none"},
